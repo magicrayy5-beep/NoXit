@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoXit - Full Access</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1 class="logo">NoXit <span>v1.0</span></h1>
+            <div class="status-bar">SYSTEM STATUS: <span id="status">UNLOCKED</span></div>
+        </header>
+
+        <section class="card">
+            <h3>CORE SENSITIVITY (FULL ACCESS)</h3>
+            <div class="input-group">
+                <label>GENERAL</label>
+                <input type="range" min="0" max="100" value="95" class="slider" id="sensi1">
+                <span class="percent">95%</span>
+            </div>
+            <div class="input-group">
+                <label>DPI SCALE</label>
+                <input type="range" min="300" max="1200" value="600" class="slider" id="dpi">
+                <span class="percent">600</span>
+            </div>
+        </section>
+
+        <section class="card ai-panel">
+            <div class="ai-header">
+                <h3>AI OPTIMIZER</h3>
+                <label class="switch">
+                    <input type="checkbox" id="ai-toggle" onclick="toggleAI()">
+                    <span class="slider-round"></span>
+                </label>
+            </div>
+            <p class="ai-desc" id="ai-log">AI is ready to analyze your screen response.</p>
+        </section>
+
+        <section class="card">
+            <h3>ADVANCED TOOLS</h3>
+            <div class="grid-tools">
+                <button class="active-btn" onclick="activate('Zero Lag')">ZERO LAG</button>
+                <button class="active-btn" onclick="activate('Anti Aliasing')">ANTI ALIASING</button>
+                <button class="active-btn" onclick="toggleHud()">HUD OVERLAY</button>
+                <button class="active-btn" onclick="activate('High FPS')">UNLOCK 90 FPS</button>
+            </div>
+        </section>
+
+        <button class="btn-main" onclick="runCore()">APPLY ALL SETTINGS</button>
+    </div>
+
+    <div id="hud-overlay" class="hud-hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

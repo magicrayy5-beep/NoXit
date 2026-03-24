@@ -1,0 +1,78 @@
+body {
+    background-color: #080808;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container { width: 100%; max-width: 450px; padding: 20px; }
+
+.logo {
+    text-align: center;
+    color: #ff0000;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+}
+
+.status-bar { text-align: center; font-size: 11px; color: #666; margin-bottom: 20px; }
+#status { color: #00ff00; font-weight: bold; }
+
+.card {
+    background: #121212;
+    border: 1px solid #222;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.ai-header { display: flex; justify-content: space-between; align-items: center; }
+.ai-desc { font-size: 12px; color: #0088ff; margin: 5px 0 0; }
+
+.input-group { display: flex; align-items: center; margin: 15px 0; }
+.slider { flex: 1; margin: 0 15px; accent-color: #ff0000; }
+.percent { width: 40px; font-weight: bold; color: #ff0000; }
+
+.grid-tools { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+.active-btn {
+    background: #1a1a1a;
+    color: #eee;
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.active-btn:active { background: #ff0000; border-color: #ff0000; }
+
+.btn-main {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(to right, #ff0000, #990000);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Switch & HUD Styles */
+.switch { position: relative; width: 40px; height: 20px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider-round { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #333; border-radius: 20px; cursor: pointer; }
+input:checked + .slider-round { background: #0088ff; }
+
+#hud-overlay {
+    position: fixed; top: 50%; left: 50%; width: 20px; height: 20px;
+    border: 2px solid #ff0000; border-radius: 50%; transform: translate(-50%, -50%);
+    pointer-events: none; z-index: 1000;
+}
+.hud-hidden { display: none; }
+
